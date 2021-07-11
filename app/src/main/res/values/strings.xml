@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Shuffle Puzzle</string>
+
+    <string name="config_title">Settings</string>
+    <string name="btn_play">Play</string>
+    <string name="config_sound">Mute game sound and music</string>
+    <string name="time">Time:</string>
+    <string name="best_time">Best time of this photo:</string>
+    <string name="result_tap">tap anywhere to continue</string>
+    <string name="completed">Completed!</string>
+    <string name="faq">Tap on blocks to rotate them and fold a photo</string>
+    <string name="select">swipe to select a photo</string>
+    <string name="mode">Game mode</string>
+    <string name="score">Score</string>
+
+    <string-array name="category_name">
+        <item>Animal</item>
+        <item>Aquarium</item>
+        <item>Architecture</item>
+        <item>Bike</item>
+        <item>Bird</item>
+        <item>Car</item>
+        <item>City</item>
+        <item>Corona</item>
+        <item>Flowers</item>
+        <item>Food</item>
+        <item>Nature</item>
+    </string-array>
+
+
+
+    <string name="admob_app_id" translatable="false">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="admob_banner" translatable="false">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="admob_fullscreen" translatable="false">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="easy">Easy</string>
+    <string name="moderate">Moderate</string>
+    <string name="hard">Hard</string>
+
+
+</resources>

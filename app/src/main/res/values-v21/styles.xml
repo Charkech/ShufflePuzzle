@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomTextView" parent="@android:style/TextAppearance.Widget.TextView">
+
+        <item name="android:textColor">#CD0348</item>
+        <item name="android:strokeColor">#FFFFFF</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">93sp</item>
+    </style>
+</resources>

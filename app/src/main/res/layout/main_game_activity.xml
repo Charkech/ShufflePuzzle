@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/pinkbg"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_above="@+id/linearAdsBanner">
+
+        <FrameLayout
+            android:id="@+id/admob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <FrameLayout
+            android:id="@+id/all"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="false">
+
+            <FrameLayout
+                android:id="@+id/game"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000"
+                android:visibility="gone"></FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:fontFamily="@font/cherry_cream_soda"
+                    android:gravity="center"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1.5"
+                    android:shadowDy="1.3"
+                    android:shadowRadius="1.6"
+                    android:textSize="35sp"
+                    style="@style/CustomTextView"
+                    android:textStyle="bold"
+                    android:text="@string/app_name" />
+
+                <TextView
+                    android:id="@+id/txt_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:shadowColor="#000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="@string/select"
+                    android:textColor="#000000"
+                    android:textSize="30sp" />
+
+                <FrameLayout
+                    android:id="@+id/photos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerViewStages"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                        </androidx.recyclerview.widget.RecyclerView>
+
+                    </RelativeLayout>
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_config"
+                        style="@style/Button"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="3dp"
+                        android:layout_weight="1"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/cherry_cream_soda"
+                        android:onClick="onClick"
+                        android:text="@string/config_title" />
+
+                    <Button
+                        android:id="@+id/btn_start"
+                        style="@style/Button"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/cherry_cream_soda"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_start"
+                        android:onClick="onClick"
+                        android:text="@string/btn_play" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/config"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:shadowColor="#000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="@string/config_title"
+                    android:textColor="#E5FD8C"
+                    android:textSize="60sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:shadowColor="#000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="@string/config_sound"
+                    android:textColor="#FFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <com.suke.widget.SwitchButton
+                    android:id="@+id/config_mute"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp" />
+
+
+                <TextView
+                    android:id="@+id/txtGameMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:shadowColor="#000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="@string/mode"
+                    android:textColor="#FFF"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupMode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/radioEasy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorAccent"
+                        android:text="@string/easy"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RadioButton
+                        android:id="@+id/radioMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorAccent"
+                        android:text="@string/moderate"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <RadioButton
+                        android:id="@+id/radioHard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/colorAccent"
+                        android:text="@string/hard"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="@dimen/_12sdp" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/result"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black"
+                android:clickable="true"
+                android:onClick="onClick"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/imgAppName1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:fontFamily="@font/cherry_cream_soda"
+                    android:gravity="center"
+                    android:shadowColor="#000000"
+                    android:shadowDx="1.5"
+                    android:shadowDy="1.3"
+                    android:shadowRadius="1.6"
+
+                    android:text="@string/app_name"
+                    android:textSize="50sp"
+                    android:padding="20dp"
+                    style="@style/CustomTextView"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgAppName1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:shadowColor="#000"
+                    android:shadowDx="1"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:text="@string/time"
+                    android:textColor="#E5FD8C"
+                    android:textSize="40sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txt_high_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/txt_result"
+                    android:layout_gravity="center|top"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:shadowColor="#000"
+                    android:shadowDx="1"
+                    android:shadowDy="2"
+                    android:shadowRadius="1"
+                    android:text="@string/best_time"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_60sdp"
+                    android:layout_below="@+id/txt_high_result"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_50sdp">
+
+                    <ImageView
+                        android:id="@+id/startComplete1"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:src="@drawable/ic_start_blank" />
+
+                    <ImageView
+                        android:id="@+id/startComplete2"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ic_start_blank" />
+
+                    <ImageView
+                        android:id="@+id/startComplete3"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_50sdp"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/ic_start_blank" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txt_tap"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="center|bottom"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center"
+                    android:shadowColor="#000"
+                    android:shadowDx="1"
+                    android:shadowDy="1"
+                    android:shadowRadius="1"
+                    android:text="@string/result_tap"
+                    android:textColor="#FFF"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txt_faq"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#80000000"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="onClick"
+                android:padding="20dp"
+                android:shadowColor="#000"
+                android:shadowDx="1"
+                android:shadowDy="2"
+                android:shadowRadius="1"
+                android:text="@string/faq"
+                android:textColor="#FFF"
+                android:textSize="30sp"
+                android:visibility="gone" />
+        </FrameLayout>
+
+    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:id="@+id/linearAdsBanner"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:background="#00000000"-->
+<!--        android:gravity="center"-->
+<!--        android:orientation="horizontal">-->
+<!--    </LinearLayout>-->
+</RelativeLayout>

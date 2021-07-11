@@ -1,0 +1,33 @@
+<resources>
+
+    <string name="config_title">הגדרות</string>
+    <string name="btn_play">שחק</string>
+    <string name="config_sound">השתק צלילים ומוסיקה של המשחק</string>
+    <string name="time">זמן:</string>
+    <string name="best_time">הזמן הטוב ביותר של תמונה זו:</string>
+    <string name="result_tap">הקש בכל מקום כדי להמשיך</string>
+    <string name="completed">הושלם!</string>
+    <string name="faq">הקש על בלוקים כדי לסובב אותם</string>
+    <string name="select">החלק כדי לבחור תמונה</string>
+    <string name="mode">רמת משחק</string>
+    <string name="score">ציון</string>
+
+    <string-array name="category_name">
+        <item>בעלי חיים</item>
+        <item>אקוריום</item>
+        <item>ארכיטקטורה</item>
+        <item>אופניים</item>
+        <item>ציפור</item>
+        <item>אוטו</item>
+        <item>עיר</item>
+        <item>קורונה</item>
+        <item>פרחים</item>
+        <item>מזון</item>
+        <item>טבע</item>
+    </string-array>
+    <string name="app_name">שאפל פאזל</string>
+    <string name="easy">"   קל"</string>
+    <string name="moderate">"   בינוני"</string>
+    <string name="hard">"   קשה"</string>
+
+</resources>
